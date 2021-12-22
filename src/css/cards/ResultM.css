@@ -1,0 +1,80 @@
+.ResultM {
+    width: 230px;
+    height: 320px;
+        background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    position: relative;
+}
+
+.ResultM:hover {
+    background-color: #6000de;
+    color: #ffffff;
+}
+
+
+.ResultM p {
+    color: #8f8f8f;
+}
+
+.ResultM .results-author {
+    margin-top: 20px;
+}
+
+.ResultM .score {
+    color: #8f8f8f;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+
+.ResultM .result-image {
+    position: relative;
+}
+
+.ResultM .cover-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+
+.ResultM .result-more {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: #8f8f8fb2;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ResultM:hover .cover-image {
+    visibility: visible;
+}
+
+
+@media (max-width:1024px) {
+    .ResultM {
+        width: 200px;
+        height: 270px;
+    }
+
+    .ResultM .score {
+        top: 3%;
+        right: 5%; 
+    }
+}

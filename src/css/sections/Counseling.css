@@ -1,0 +1,141 @@
+.Counseling {
+    width: 100%;
+    max-width: 1440px;
+    height: 450px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.decoration-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.decoration-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.Counseling h1 {
+    max-width: 500px;
+    font-size: 48px;
+    text-align: left;
+}
+
+.Counseling h1 span {
+    font-weight: 900;
+    /* background: -webkit-linear-gradient(90deg, #6000de, #00ffff); */
+    background: linear-gradient(
+        90deg,
+        rgba(96, 0, 222, 1) 30%,
+        rgba(0, 255, 255, 1) 70%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.counseling-content {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.counseling-content p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.counseling-content a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 250px;
+    height: 50px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.write {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+}
+
+.write:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+.agenda {
+    background: linear-gradient(110deg, rgba(96,0,222,.8) 50%, rgba(0,255,255,0.6) 80%);
+}
+
+.agenda:hover {
+    background: linear-gradient(110deg, rgba(96,0,222,.8) 20%, rgba(0,255,255,0.6) 60%);
+}
+
+
+@media (max-width:1024px) {
+    .decoration-left, .decoration-right {
+        width: 120px;
+    }
+}
+
+@media (max-width:768px) {
+    .decoration-right {
+        visibility: hidden;
+    }
+
+    .Counseling {
+        padding: 0px 20px;
+        gap: 40px;
+    }
+
+    .Counseling h1 {
+        font-size: 36px;
+        text-align: right;
+     }
+}
+
+@media (max-width:425px) {
+    .Counseling {
+        flex-direction: column;
+        height: 550px;
+    }
+
+    .Counseling h1 {
+        text-align: center;
+    }
+
+    .counseling-content {
+        align-items: center;
+    }
+
+    .counseling-content p {
+        text-align: center;
+        width: 60%;
+    }
+
+    .decoration-left {
+        width: 100px;
+    }
+}
+
+
+@media (max-width:375px) {
+    .Counseling h1 {
+        font-size: 24px;
+    }
+}

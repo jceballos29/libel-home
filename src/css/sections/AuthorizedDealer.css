@@ -1,0 +1,77 @@
+.AuthorizedDealer {
+    width: 100%;
+    max-width: 1440px;
+    height: 200px;
+    position: relative;
+    background-color: #6000de;
+    display: grid;
+    grid-template-columns: 1.3fr 0.4fr 1.3fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "authorized-text logo-zbrush get-now";
+}
+
+.authorized-text {
+    grid-area: authorized-text;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.authorized-text p {
+    font-size: 34px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.authorized-text span {
+    font-weight: bold;
+}
+
+.logo-zbrush {
+    grid-area: logo-zbrush;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.get-now {
+    height: 100%;
+    grid-area: get-now;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.authorized-decoration {
+    position: absolute;
+    top: 0;
+    right: 10%;
+}
+
+@media (max-width: 768px) {
+    .AuthorizedDealer { 
+        display: none;
+    }
+    .authorized-text p {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .authorized-decoration {
+        position: absolute;
+        top: 0;
+        right: -10%;
+    }
+}
+
+@media (max-width:425px) {
+    .AuthorizedDealer { 
+        display: none;
+    }
+}

@@ -1,0 +1,138 @@
+.Convert3DPro {
+    width: 100%;
+    max-width: 1440px;
+    height: 530px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(143, 143, 143, 0.3);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+        "convert-title convert-title convert-text convert-text"
+        "convert-title convert-title convert-text convert-text"
+        "convert-technologies convert-technologies convert-technologies convert-technologies";
+    padding: 0px 80px;
+}
+
+.convert-title {
+    grid-area: convert-title;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.convert-title h1 {
+    color: #000000;
+    font-weight: 500;
+    font-size: 64px;
+}
+
+.convert-title span {
+    color: #6000de;
+}
+
+.convert-text {
+    grid-area: convert-text;
+    color: #8f8f8f;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.convert-text p {
+    width: 70%;
+    font-size: 20px;
+}
+
+.convert-technologies {
+    grid-area: convert-technologies;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1024px) {
+
+    .Convert3DPro {
+        padding: 0px 40px;
+    }
+
+    .convert-title h1 {
+        font-size: 48px;
+    }
+
+    .convert-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 860px) {
+    .Convert3DPro {
+        height: 400px;
+        padding: 0px 40px;
+    }
+    .convert-title h1 {
+        font-size: 38px;
+    }
+
+    .convert-text p {
+        font-size: 16px;
+        width: 90%;
+    }
+    .convert-technologies img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Convert3DPro {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 0.8fr) 1.4fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "convert-title"
+            "convert-text"
+            "convert-technologies";
+    }
+
+    .convert-title {
+        grid-area: convert-title;
+        justify-content: center;
+    }
+
+    .convert-title h1 {
+        font-size: 24px;
+    }
+
+    .convert-text {
+        grid-area: convert-text;
+    }
+
+    .convert-text p {
+        font-size: 16px;
+        width: 100%;
+        text-align: center  ;
+    }
+
+    .convert-technologies {
+        grid-area: convert-technologies;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0px 0px;
+        grid-template-areas:
+            ". . ."
+            ". . .";
+        align-items: center;
+        justify-content: center;
+    }
+
+    .convert-technologies img {
+        width: 70px;
+    }
+}

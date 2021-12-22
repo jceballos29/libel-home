@@ -1,0 +1,190 @@
+.Navbar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border-bottom: 1px solid rgba(143, 143, 143, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.Navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0px 20px;
+}
+
+.Navbar a:hover {
+    color: rgba(143, 143, 143, 1);
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 0.7fr 1.6fr 0.7fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "logo navigation academy";
+    height: 80px;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(143, 143, 143, 0.3);
+}
+
+.logo img {
+    width: 150px;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "search shortcuts";
+    grid-area: navigation;
+    padding: 0px 20px;
+    border-right: 1px solid rgba(143, 143, 143, 0.3);
+}
+.search {
+    grid-area: search;
+    display: flex;
+    align-items: center;
+}
+
+.search input  {
+    font-size: 16px;
+    padding: 5px 0px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #ffffff;
+}
+
+.search input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #000000 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+.search-icon {
+    color: #fafafa;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.shortcuts {
+    grid-area: shortcuts;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-courses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.academy {
+    grid-area: academy;
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    border: 1px solid rgba(143, 143, 143, 0.6);
+    padding: 10px 20px;
+}
+
+.login:hover {
+    background-color: rgba(143, 143, 143, 0.4);
+}
+
+.menu-list, .menu-icon {
+    display: none;
+}
+
+
+@media (max-width:1024px) {
+    .nav-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "logo navigation academy";
+    height: 80px;
+}
+}
+
+@media (max-width:768px) {
+
+    .Navbar {
+        width: 100%;
+    }
+
+    .shortcuts, .register, .login {
+        display: none;
+    }
+
+    .navigation {
+        border: none;
+    }
+
+    .academy {
+        justify-content: flex-end;
+    }
+
+    .menu-icon {
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-list {
+    width: 400px;
+    height: calc(100vh - 80px);
+    position: fixed;
+    top: 80px;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 36px;
+    background-color: #8f8f8f;
+}
+
+    .menu-academy {
+        width: 100%;
+        border-bottom: 1px solid;
+    }
+}
+
+@media (max-width:425px) {
+    .search input {
+        display: none;
+    }
+
+    .navigation {
+        border-right: 1px solid rgba(143, 143, 143, 0.2);
+    }
+
+    .nav-container {
+        grid-template-columns: 2.2fr 0.4fr 0.4fr;
+    }
+
+    .search-icon {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .menu-list { width: 100vw;}
+}
