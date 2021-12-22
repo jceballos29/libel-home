@@ -8,7 +8,23 @@
     gap: 0px 0px;
     grid-template-areas: "results-information results-cards";
     padding: 0px 80px;
+    position: relative;
 }
+
+.decoration-1 {
+    position: absolute;
+    top: -30%;
+    left: 0%;
+    z-index: 10;
+    width: 120px;
+}
+
+.decoration-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 .results-information {
     grid-area: results-information;
     display: grid;
@@ -135,6 +151,11 @@
     .results-text h2 {
         text-align: left;
         font-size: 34px;
+    }
+
+    .decoration-1 { 
+        width: 70px;
+        top: -10%;
     }
 }
 

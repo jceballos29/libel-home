@@ -17,9 +17,23 @@ import image4 from '../../images/results/Ellipse 231.png'
 
 import tech1 from '../../images/professional3d/Imagen 8.png'
 
+import decoration1 from '../../images/04.png'
+import decoration2 from "../../images/01.png";
+
 const Results = () => {
     return (
         <div className="Results">
+            <img
+                src={decoration1}
+                alt="Decoration 1"
+                className="decoration-1"
+            />
+            <img
+                src={decoration2}
+                alt="Decoration 2"
+                className="decoration-2"
+            />
+
             <div className="results-information">
                 <div className="results-title">
                     <img src={libel} alt="libel" />
