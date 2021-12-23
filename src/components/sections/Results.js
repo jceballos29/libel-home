@@ -23,6 +23,8 @@ import decoration2 from "../../images/01.png";
 const Results = () => {
     return (
         <div className="Results">
+
+            <div className="result-container">
             <img
                 src={decoration1}
                 alt="Decoration 1"
@@ -33,46 +35,78 @@ const Results = () => {
                 alt="Decoration 2"
                 className="decoration-2"
             />
-
-            <div className="results-information">
-                <div className="results-title">
-                    <img src={libel} alt="libel" />
-                    <h1>
-                        RESULTADOS
-                        <br />
-                        DE ALUMNOS
-                    </h1>
-                </div>
-                <div className="results-text">
-                    <h2>
-                        !Obtén <br />
-                        <span className="color">
-                            sorprendentes
+                <div className="results-information">
+                    <div className="results-title">
+                        <img src={libel} alt="libel" />
+                        <h1>
+                            RESULTADOS
                             <br />
-                            resultados
-                        </span>{" "}
-                        en <br />
-                        corto tiempo¡
-                    </h2>
-                    <p>
-                        No necesitas de conocimientos
-                        <br />
-                        previos. Solamente tienes que
-                        <br />
-                        adaptarte a{" "}
-                        <span className="underline">
-                            nuestro plan de estudios.
-                        </span>
-                    </p>
-                    <a href="/" className="know-more">
-                        QUIERO SABER MÁS{" "}
-                        <IoChevronForward style={{ marginLeft: "2px" }} />
-                    </a>
+                            DE ALUMNOS
+                        </h1>
+                    </div>
+                    <div className="results-text">
+                        <h2>
+                            !Obtén <br />
+                            <span className="color">
+                                sorprendentes
+                                <br />
+                                resultados
+                            </span>{" "}
+                            en <br />
+                            corto tiempo¡
+                        </h2>
+                        <p>
+                            No necesitas de conocimientos
+                            <br />
+                            previos. Solamente tienes que
+                            <br />
+                            adaptarte a{" "}
+                            <span className="underline">
+                                nuestro plan de estudios.
+                            </span>
+                        </p>
+                        <a href="/" className="know-more">
+                            QUIERO SABER MÁS{" "}
+                            <IoChevronForward style={{ marginLeft: "2px" }} />
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div className="results-cards">
-                <div className="result-column1">
-                    <img src={avatars} alt="Group" />
+                <div className="results-cards">
+                    <div className="result-column1">
+                        <img src={avatars} alt="Group" />
+                        <ResultL
+                            image={image1}
+                            author={"Rodrigo"}
+                            title={"Oso Espacial"}
+                            points={"5.0"}
+                            tech={tech1}
+                        />
+                    </div>
+                    <div className="result-column2">
+                        <ResultS
+                            image={image2}
+                            author={"Gilbert"}
+                            title={"Videojuegos AAA"}
+                        />
+                        <ResultS
+                            image={image3}
+                            author={"Runyo"}
+                            title={"Animación"}
+                        />
+                    </div>
+                    <div className="result-column3">
+                        <ResultM
+                            image={image4}
+                            author={"LauraRt"}
+                            title={"Rigging para Videojuegos"}
+                            points={"4.8"}
+                        />
+                        <div className="blender">
+                            <img src={blender} alt="blender" />
+                        </div>
+                    </div>
+                </div>
+                <div className="results-cards-mobile">
                     <ResultL
                         image={image1}
                         author={"Rodrigo"}
@@ -81,38 +115,6 @@ const Results = () => {
                         tech={tech1}
                     />
                 </div>
-                <div className="result-column2">
-                    <ResultS
-                        image={image2}
-                        author={"Gilbert"}
-                        title={"Videojuegos AAA"}
-                    />
-                    <ResultS
-                        image={image3}
-                        author={"Runyo"}
-                        title={"Animación"}
-                    />
-                </div>
-                <div className="result-column3">
-                    <ResultM
-                        image={image4}
-                        author={"LauraRt"}
-                        title={"Rigging para Videojuegos"}
-                        points={"4.8"}
-                    />
-                    <div className="blender">
-                        <img src={blender} alt="blender" />
-                    </div>
-                </div>
-            </div>
-            <div className="results-cards-mobile">
-                <ResultL
-                    image={image1}
-                    author={"Rodrigo"}
-                    title={"Oso Espacial"}
-                    points={"5.0"}
-                    tech={tech1}
-                />
             </div>
         </div>
     );

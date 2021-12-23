@@ -123,6 +123,12 @@
 }
 
 
+@media (max-width:1024px) {
+    .Membership {
+        width: 230px;
+    }
+}
+
 @media (max-width: 320px) {
     .Membership {
         width: 230px;

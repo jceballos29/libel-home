@@ -1,5 +1,5 @@
 .Feature {
-    width: 270px;
+    width: 360px;
     height: 350px;
     background-color: #6000de;
     color: #ffffff;
@@ -55,8 +55,8 @@
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 1024px) {
     .Feature {
-        width: 230px;
+        width: 300px;
     }
 }

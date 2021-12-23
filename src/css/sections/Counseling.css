@@ -1,6 +1,5 @@
 .Counseling {
     width: 100%;
-    max-width: 1440px;
     height: 450px;
     display: flex;
     position: relative;
@@ -8,17 +7,26 @@
     justify-content: center;
 }
 
+.counseling-container {
+        width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
 
 .decoration-left {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -20%;
 }
 
 .decoration-right {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -25%;
 }
 
 .Counseling h1 {
@@ -29,7 +37,6 @@
 
 .Counseling h1 span {
     font-weight: 900;
-    /* background: -webkit-linear-gradient(90deg, #6000de, #00ffff); */
     background: linear-gradient(
         90deg,
         rgba(96, 0, 222, 1) 30%,
@@ -88,54 +95,11 @@
 
 
 @media (max-width:1024px) {
-    .decoration-left, .decoration-right {
-        width: 120px;
-    }
+.decoration-left { 
+    left: -43%;
 }
 
-@media (max-width:768px) {
-    .decoration-right {
-        visibility: hidden;
-    }
-
-    .Counseling {
-        padding: 0px 20px;
-        gap: 40px;
-    }
-
-    .Counseling h1 {
-        font-size: 36px;
-        text-align: right;
-     }
+.decoration-right {
+    right: -45%;
 }
-
-@media (max-width:425px) {
-    .Counseling {
-        flex-direction: column;
-        height: 550px;
-    }
-
-    .Counseling h1 {
-        text-align: center;
-    }
-
-    .counseling-content {
-        align-items: center;
-    }
-
-    .counseling-content p {
-        text-align: center;
-        width: 60%;
-    }
-
-    .decoration-left {
-        width: 100px;
-    }
-}
-
-
-@media (max-width:375px) {
-    .Counseling h1 {
-        font-size: 24px;
-    }
 }

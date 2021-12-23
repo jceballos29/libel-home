@@ -1,9 +1,17 @@
 .AuthorizedDealer {
     width: 100%;
-    max-width: 1440px;
     height: 200px;
-    position: relative;
     background-color: #6000de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.authorized-container {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    position: relative;
     display: grid;
     grid-template-columns: 1.3fr 0.4fr 1.3fr;
     grid-template-rows: 1fr;
@@ -54,24 +62,8 @@
     right: 10%;
 }
 
-@media (max-width: 768px) {
-    .AuthorizedDealer { 
-        display: none;
-    }
-    .authorized-text p {
-        font-size: 24px;
-        margin-right: 10px;
-    }
-
+@media (max-width: 1024px) {
     .authorized-decoration {
-        position: absolute;
-        top: 0;
-        right: -10%;
-    }
-}
-
-@media (max-width:425px) {
-    .AuthorizedDealer { 
-        display: none;
+        right: 0;
     }
 }

@@ -1,8 +1,16 @@
 .FAQ {
     width: 100%;
-    max-width: 1440px;
     height: 750px;
     background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-container {
+        width: 100%;
+    max-width: 1440px;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1.4fr;
@@ -59,7 +67,6 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    /* margin-bottom: 2px; */
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: bottom;
@@ -76,7 +83,6 @@
         "faq-questions"
         "faq-advisory";
     grid-area: faq-container;
-    /* background-color: azure; */
 }
 
 .faq-questions {
@@ -109,94 +115,8 @@
     border: 1px solid #6000de;
 }
 
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
     .FAQ {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 1.7fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "faq-title"
-            "faq-content";
-        height: 1000px;
-    }
-
-    .faq-title {
-        grid-area: faq-title;
-        font-size: 26px;
-    }
-
-    .faq-title img {
-        width: 180px;
-        bottom: 27%;
-    }
-
-    .faq-content {
-        display: grid;
-        grid-template-columns: 1fr;
-          grid-template-rows: 1.2fr 0.8fr; 
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "faq-container"
-            "faq-images";
-        grid-area: faq-content;
-    }
-
-    .faq-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1.5fr 0.5fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "faq-questions"
-            "faq-advisory";
-        grid-area: faq-container;
-    }
-
-    .faq-questions {
-        grid-area: faq-questions;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .faq-advisory {
-        grid-area: faq-advisory;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .faq-images {
-        grid-area: faq-images;
-    background-size: 8  0%;
-
-    }
-}
-
-
-@media (max-width:375px) {
-    .faq-title {
-        font-size: 22px;
-     }
-
-     .faq-title img {
-        width: 150px;
-        bottom: 35%;
-    }
-}
-
-
-@media (max-width:320px) {
-    .faq-title {
-        font-size: 18px;
-     }
-
-     .faq-title img {
-        width: 150px;
-        bottom: 35%;
+        height: 650px;
     }
 }

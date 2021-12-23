@@ -1,8 +1,16 @@
 .Memberships {
     width: 100%;
-    max-width: 1440px;
-    height: 650px;
+    height: 700px;
     background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memberships-container {
+        width: 100%;
+    max-width: 1440px;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 1.6fr;
@@ -10,8 +18,7 @@
     grid-template-areas:
         "memberships-header"
         "memberships-cards";
-
-    /* padding: 0px 80px; */
+        padding-top: 40px;
 }
 
 .memberships-header {
@@ -19,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 60px;
+    padding: 0px 80px;
 }
 
 .memberships-header h1 {
@@ -47,92 +54,17 @@
     grid-area: memberships-cards;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-}
-
-/* ############################### */
-
-.slick-slider {
-    width: 1300px;
-    height: 400px;
-    padding: 0px 10px;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-
-.slick-list {
-    height: 430px;
-    width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slick-slide {
-    padding: 15px;
-}
-
-.slick-prev,
-.slick-next {
-    width: 32px !important;
-    height: 32px !important;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: #000000 !important;
-    font-size: 32px !important;
-}
-
-.slick-dots li button:before {
-    top: -50% !important;
+    justify-content: space-between;
+    padding: 0px 80px;
 }
 
 
-/* @media (max-width:1380px) {
-    .Memberships {
-        padding: 0px 30px;
-    }
-} */
-
-@media (max-width:1280px) {
-
-    .slick-slider {
-        width: 1150px;
-    }
-}
-
-@media (max-width: 1124px) {
-    .slick-slider {
-        width: 900px;
-    }
-}
-
-@media (max-width: 850px) {
-    .slick-slider {
-        width: 610px;
-    }
-}
-
-@media (max-width: 425px) {
-    .Memberships {
-        padding-top: 40px;
-     }
-    .slick-slider {
-        width: 320px;
-    }
-
+@media (max-width:1024px) {
     .memberships-header {
-        flex-direction: column;
+        padding: 0px 20px;
     }
-    .memberships-header h1 {
-        text-align: center;
-    }
-}
 
-@media (max-width: 320px) {
-    .slick-slider {
-        width: 270px;
+    .memberships-cards {
+        padding: 0px 20px;
     }
 }
