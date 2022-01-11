@@ -14,7 +14,7 @@
     width: 1440px;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 0.85fr 1.15fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: "header-information header-image";
@@ -25,6 +25,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    
 }
 
 .tag-info {
@@ -48,12 +49,15 @@
 }
 
 .header-image {
+    /* width: 755px; */
     grid-area: header-image;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: azure; */
 }
+
 
 .Header h1 {
     max-width: 533px;
@@ -81,23 +85,54 @@
     -webkit-text-fill-color: transparent;
 }
 
-.slider-control {
+.header-slider-control {
     width: 200px;
     height: 48px;
     border-radius: 24px;
-    /* opacity: 0.46; */
     -webkit-backdrop-filter: blur(4.5px);
     backdrop-filter: blur(4.5px);
-    background-image: linear-gradient(
-        258deg,
-        rgba(255, 255, 255, 0.2) 30%,
-        rgba(0, 0, 0, 0.47) 70%
-    );
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    background-color: rgba(143, 143, 143, 0.4);
+display: grid; 
+  grid-template-columns: 0.7fr 1.6fr 0.7fr; 
+  gap: 0px 0px; 
     font-size: 24px;
     margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+}
+
+.header-button {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-button:hover {
+    color: #8f8f8f;
+}
+
+.header-slider-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-slider-dot {
+    border: none;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+.header-slider-dot:hover {
+    background-color: #8f8f8f;
+
 }
 
 .header-underline {

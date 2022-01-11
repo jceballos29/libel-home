@@ -1,6 +1,6 @@
 .Benefits {
     width: 100%;
-    height: 580px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +46,23 @@
     top: 0;
     right: -20%;
     /* transform: rotate(90deg); */
+}
+
+.benefits-nav  {
+    margin-top: 40px;
+}
+.benefits-nav button {
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    border: none;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.benefits-nav button:hover {
+    background-color: #6000de;
+
 }
 
 @media (max-width: 768px) {

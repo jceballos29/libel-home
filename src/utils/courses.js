@@ -15,7 +15,7 @@ import avatar6 from "../images/courses/Avatars6.png";
 import zbrush from "../images/professional3d/Imagen 1.png"
 import blender from "../images/professional3d/Imagen 7.png"
 
-const courses =[
+const courses = [
     {
         title: "Escuela ZBrush",
         price: "39.00",
@@ -24,6 +24,7 @@ const courses =[
         avatar: avatar1,
         software: zbrush,
         start: false,
+        tag: "cursos",
     },
     {
         title: "Escuela Domina Blender",
@@ -33,6 +34,7 @@ const courses =[
         avatar: avatar2,
         software: blender,
         start: false,
+        tag: "cursos",
     },
     {
         title: "Máster Personaje Videojuegos AAA",
@@ -42,6 +44,7 @@ const courses =[
         avatar: avatar3,
         software: "",
         start: 123,
+        tag: "master",
     },
     {
         title: "Escultura para impresión",
@@ -51,6 +54,7 @@ const courses =[
         avatar: avatar4,
         software: "",
         start: 159,
+        tag: "camp",
     },
     {
         title: "Máster en Blender",
@@ -60,6 +64,7 @@ const courses =[
         avatar: avatar5,
         software: "",
         start: 1,
+        tag: "master",
     },
     {
         title: "Máster en Rigging",
@@ -69,33 +74,37 @@ const courses =[
         avatar: avatar6,
         software: "",
         start: 5,
+        tag: "master",
     },
     {
         title: "Escuela ZBrush",
         price: "39.00",
         info: "Aprende ZBrush desde cero y descubre lo qu puedes lograr con este software de escultura digital.",
-        image: image1,
+        image: image3,
         avatar: avatar3,
         software: zbrush,
         start: false,
+        tag: "cursos",
     },
     {
         title: "Escuela Domina Blender",
         price: "189.00",
         info: "Aprende Blender desde cero y domina el mejor software gratuito de diseño 3D.",
-        image: image2,
+        image: image3,
         avatar: avatar1,
         software: blender,
         start: false,
+        tag: "cursos",
     },
     {
         title: "Máster Personaje Videojuegos AAA",
         price: "249.00",
         info: "Descubre las últimas técnicas de la industria y crea personajes realistas para videojuegos AAA.",
-        image: image3,
+        image: image1,
         avatar: avatar2,
         software: "",
         start: 123,
+        tag: "master",
     },
 ];
 

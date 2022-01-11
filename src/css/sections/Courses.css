@@ -1,12 +1,13 @@
 .Courses {
     width: 100%;
-    height: 2000px;
+    height: 1200px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     z-index: 100;
+    padding-top: 80px;
 }
 
 .courses-container {
@@ -76,11 +77,19 @@
     cursor: pointer;
     background-color: transparent;
     color: #d4d4d4;
+    outline: none;
 }
 
 .courses-navigation button:hover {
     background-color: #d4d4d4b6;
     color: #ffffff;
+}
+
+.courses-navigation .bActive {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6) inset;
+    background-color: #d4d4d4b6;
+    color: #000000;
+
 }
 
 .courses-see-more {
@@ -89,7 +98,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to top, #1111136e 87%, rgba(17, 17, 19, 0));
+    background-color: rgba(0, 0, 0, 0.6);
+        -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     position: absolute;
     bottom: 0;
     left: 0;

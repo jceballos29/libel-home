@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/sections/Header.css";
 import SeeResults from "../buttons/SeeResults";
 
 import decoration from "../../images/03.png";
-import banner from "../../images/header1.png";
 
 import Tag from "../buttons/Tag";
 
 import line from "../../images/line.png";
-// import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+
+import banners from "../../utils/bannersHeaders";
 
 const Header = () => {
+    const [banner, setBanner] = useState(0);
+
+    const nextBanner = () => {
+        setBanner(banner === banners.length - 1 ? 0 : banner + 1);
+    };
+
+    const previousBanner = () => {
+        setBanner(banner === 0 ? banners.length - 1 : banner - 1);
+    };
+
+   
+
     return (
         <div className="Header">
             <div className="header-container">
@@ -21,10 +34,40 @@ const Header = () => {
                 />
 
                 <div className="header-information">
-                    {/* <div className="slider-control">
-                        <IoArrowBack />
-                        <IoArrowForward />
-                    </div> */}
+                    <div className="header-slider-control">
+                        <IoArrowBack
+                            className="header-button"
+                            onClick={() => {
+                                previousBanner();
+                            }}
+                        />
+                        <div className="header-slider-nav">
+                            <button
+                                className="header-slider-dot"
+                                onClick={() => {
+                                    setBanner(0);
+                                }}
+                            ></button>
+                            <button
+                                className="header-slider-dot"
+                                onClick={() => {
+                                    setBanner(1);
+                                }}
+                            ></button>
+                            <button
+                                className="header-slider-dot"
+                                onClick={() => {
+                                    setBanner(2);
+                                }}
+                            ></button>
+                        </div>
+                        <IoArrowForward
+                            className="header-button"
+                            onClick={() => {
+                                nextBanner();
+                            }}
+                        />
+                    </div>
                     <h1>
                         <span>
                             Academia
@@ -45,7 +88,8 @@ const Header = () => {
                 </div>
                 <div className="header-image">
                     <img
-                        src={banner}
+                        onClick={() => {nextBanner()}}
+                        src={banners[banner].image}
                         alt="Banner Header"
                         className="header-banner"
                     />

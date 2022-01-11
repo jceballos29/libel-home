@@ -1,6 +1,6 @@
 .Featured {
     width: 100%;
-    height: 625px;
+    height: 550px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 1.6fr;
+    grid-template-rows: 0.5fr 1.5fr;
     gap: 0px 0px;
     grid-template-areas:
         "featured-header"
@@ -64,11 +64,17 @@
     color: #ffffff;
 }
 
+.fActive {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6) inset;
+    background-color: #d4d4d4b6;
+    color: #000000;
+}
+
 .featured-body {
     grid-area: featured-body;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
     padding: 0px 80px;
 }
 

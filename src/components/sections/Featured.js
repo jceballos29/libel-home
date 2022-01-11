@@ -1,127 +1,103 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/sections/Featured.css";
 import Feature from "../cards/Feature";
 
-import feature1 from "../../images/featured/feature1.png";
-import feature2 from "../../images/featured/feature2.png";
-import feature3 from "../../images/featured/feature3.png";
-
-import avatar1 from "../../images/featured/Avatar.png";
-import avatar2 from "../../images/featured/Avatar1.png";
-import avatar3 from "../../images/featured/Avatar2.png";
-
-// import Slider from "react-slick";
+import features from "../../utils/features";
 
 const Featured = () => {
+    const [buttonNav, setButtonNav] = useState({
+        cursos: 0,
+        master: 0,
+        camp: 0,
+    });
+    const [filter, setFilter] = useState("cursos");
 
-    // const settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 2000,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     arrow: true,
-    //     responsive: [
-    //         {
-    //             breakpoint: 1024,
-    //             settings: {
-    //                 slidesToShow: 3,
-    //                 slidesToScroll: 1,
-    //                 infinite: true,
-    //                 dots: true,
-    //             },
-    //         },
-    //         {
-    //             breakpoint: 850,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 2,
-    //                 infinite: true,
-    //                 dots: true,
-    //             },
-    //         },
-    //         {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //                 infinite: true,
-    //                 dots: true,
-    //                 arrow: false,
-    //             },
-    //         },
-    //     ],
-    // };
-
+    const filtered = features.filter((feature) => feature.tag === filter);
+    
     return (
         <div className="Featured">
             <div className="featured-container">
                 <div className="featured-header">
                     <h1>DESTACADOS</h1>
                     <div className="featured-navigation">
-                        <button>CURSOS</button>
-                        <button>MASTERS</button>
-                        <button>3D CAMP</button>
+                        <button
+                            className={buttonNav.cursos ? "fActive" : ""}
+                            onClick={() => {
+                                if (buttonNav.cursos === 0) {
+                                    setButtonNav({
+                                        cursos: 1,
+                                        master: 0,
+                                        camp: 0,
+                                    });
+                                    setFilter("cursos");
+                                } else {
+                                    setButtonNav({
+                                        cursos: 0,
+                                        master: 0,
+                                        camp: 0,
+                                    });
+                                    setFilter("cursos");
+                                }
+                            }}
+                        >
+                            CURSOS
+                        </button>
+                        <button
+                            className={buttonNav.master ? "fActive" : ""}
+                            onClick={() => {
+                                if (buttonNav.master === 0) {
+                                    setButtonNav({
+                                        cursos: 0,
+                                        master: 1,
+                                        camp: 0,
+                                    });
+                                    setFilter("master");
+                                } else {
+                                    setButtonNav({
+                                        cursos: 0,
+                                        master: 0,
+                                        camp: 0,
+                                    });
+                                    setFilter("cursos");
+                                }
+                            }}
+                        >
+                            MASTERS
+                        </button>
+                        <button
+                            className={buttonNav.camp ? "fActive" : ""}
+                            onClick={() => {
+                                if (buttonNav.camp === 0) {
+                                    setButtonNav({
+                                        cursos: 0,
+                                        master: 0,
+                                        camp: 1,
+                                    });
+                                    setFilter("camp");
+                                } else {
+                                    setButtonNav({
+                                        cursos: 0,
+                                        master: 0,
+                                        camp: 0,
+                                    });
+                                    setFilter("cursos");
+                                }
+                            }}
+                        >
+                            3D CAMP
+                        </button>
                     </div>
                 </div>
                 <div className="featured-body">
-                    {/* <Slider {...settings}>
+                    {filtered.map((feature, index) => (
                         <Feature
-                            image={feature1}
-                            avatar={avatar2}
-                            name={"Ricardo"}
-                            title={"Personaje para Animación"}
+                            key={index}
+                            image={feature.image}
+                            avatar={feature.avatar}
+                            name={feature.name}
+                            title={feature.title}
                         />
-                        <Feature
-                            image={feature2}
-                            avatar={avatar1}
-                            name={"Mariana"}
-                            title={"Personaje en Blender"}
-                        />
-                        <Feature
-                            image={feature3}
-                            avatar={avatar3}
-                            name={"Lauryu"}
-                            title={"Armas en Blender para videojuegos AAA"}
-                        />
-                        <Feature
-                            image={feature1}
-                            avatar={avatar2}
-                            name={"Ricardo"}
-                            title={"Personaje para Animación"}
-                        />
-                        <Feature
-                            image={feature2}
-                            avatar={avatar1}
-                            name={"Mariana"}
-                            title={"Personaje en Blender"}
-                        />
-                        <Feature
-                            image={feature3}
-                            avatar={avatar3}
-                            name={"Lauryu"}
-                            title={"Armas en Blender para videojuegos AAA"}
-                        />
-                    </Slider> */}
-                    <Feature
-                        image={feature1}
-                        avatar={avatar2}
-                        name={"Ricardo"}
-                        title={"Personaje para Animación"}
-                    />
-                    <Feature
-                        image={feature2}
-                        avatar={avatar1}
-                        name={"Mariana"}
-                        title={"Personaje en Blender"}
-                    />
-                    <Feature
-                        image={feature3}
-                        avatar={avatar3}
-                        name={"Lauryu"}
-                        title={"Armas en Blender para videojuegos AAA"}
-                    />
+                    ))}
                 </div>
             </div>
         </div>

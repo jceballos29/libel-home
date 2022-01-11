@@ -77,13 +77,97 @@
 
 .convert-technologies {
     grid-area: convert-technologies;
+    display: grid;
+    grid-template-columns: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "technologies-previous technologies technologies-next";
+    height: 180px;
+}
+.technologies-previous {
+    grid-area: technologies-previous;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.technologies-next {
+    grid-area: technologies-next;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technologies-button {
+    border: none;
+    background-color: #6000de;
+    color: #ffffff;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.technologies {
+    width: 100%;
+    height: 100%;
+    grid-area: technologies;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-@media (max-width: 1024px) {
+.slick-slider {
+        display: flex !important;
+    align-items: center ;
+    justify-content: space-evenly;
+    width: 1280px;
+    height: 180px;
+}
 
+.technologies-slider .slick-prev{
+    grid-area: technologies-previous;
+    width: 45px;
+    height: 45px;
+    left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.technologies-slider .slick-next {
+    grid-area: technologies-next;
+
+        width: 45px;
+    height: 45px;
+   right: -50px;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technologies-slider .slick-prev:before, .technologies-slider .slick-next:before {
+    color: #6000de;
+    opacity: 1;
+    font-size: 42px;
+}
+
+.technologies img {
+    height: 35px;
+    object-fit: contain;
+}
+
+@media (max-width:1280px) {
+    .slick-slider {
+        width: 1120px;
+    }
+}
+
+@media (max-width: 1024px) {
     .Convert3DPro {
         height: 400px;
     }
@@ -96,7 +180,13 @@
         font-size: 16px;
     }
 
-    .convert-underline  {
+    .convert-underline {
         width: 420px;
     }
+
+    .slick-slider {
+        width: 850px;
+    }
 }
+
+
