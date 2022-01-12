@@ -35,7 +35,6 @@ const benefits = {
 
 const Benefits = () => {
     const [state, setState] = useState("first");
-    console.log(benefits[state]);
 
     const active = { backgroundColor: "#6000de" };
 

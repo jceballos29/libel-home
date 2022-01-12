@@ -102,7 +102,6 @@
     width: 100%;
     max-width: 1440px;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -121,6 +120,48 @@
 
     .decoration {
         right: -45%;
+    }
+}
+
+@media (max-width: 460px) {
+    .decoration {
+        display: none;
+    }
+
+    .footer-list li {
+        font-size: 12px;
+    }
+
+    .contact img {
+        width: 120px;
+    }
+
+    .social-networks img {
+        width: 15px;
+    }
+
+    .footer-information {
+        font-size: 12px;
+        justify-content: flex-start;
+        gap: 40px;
+        margin-left: 60px;
+    }
+
+    .contact p {
+        width: 200px;
+    }
+
+    .foo-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .Footer .foo-container > p {
+        width: 100%;
+        text-align: center;
     }
 }
 

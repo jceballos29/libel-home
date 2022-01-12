@@ -67,3 +67,9 @@
         right: 0;
     }
 }
+
+@media (max-width: 460px) {
+.AuthorizedDealer {
+display: none;
+}
+}

@@ -11,7 +11,19 @@ import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
 import banners from "../../utils/bannersHeaders";
 
+const tags = [
+    { name: "COMPRA TU LICENCIA ZBRUSH" },
+    { name: "ESCUELA DOMINA BLENDER" },
+    { name: "ESCUELA ZBRUSH" },
+    { name: "3D CAMP" },
+];
+
 const Header = () => {
+
+    const tagsList = tags.map((tag, index) => (
+        <Tag key={index} name={tag.name} />
+    ));
+
     const [banner, setBanner] = useState(0);
 
     const nextBanner = () => {
@@ -21,8 +33,6 @@ const Header = () => {
     const previousBanner = () => {
         setBanner(banner === 0 ? banners.length - 1 : banner - 1);
     };
-
-   
 
     return (
         <div className="Header">
@@ -72,8 +82,9 @@ const Header = () => {
                         <span>
                             Academia
                             <br />
-                        </span>
-                        <span>online</span> aprende 3d desde cero
+                            online
+                        </span>{" "}
+                        aprende 3d desde cero
                         <img
                             src={line}
                             alt="header-underline"
@@ -88,7 +99,9 @@ const Header = () => {
                 </div>
                 <div className="header-image">
                     <img
-                        onClick={() => {nextBanner()}}
+                        onClick={() => {
+                            nextBanner();
+                        }}
                         src={banners[banner].image}
                         alt="Banner Header"
                         className="header-banner"
@@ -96,10 +109,16 @@ const Header = () => {
                 </div>
             </div>
             <div className="header-tags">
-                <Tag name={"COMPRA TU LICENCIA ZBRUSH"} />
-                <Tag name={"ESCUELA DOMINA BLENDER"} />
-                <Tag name={"ESCUELA ZBRUSH"} />
-                <Tag name={"3D CAMP"} />
+                <div className="tags">
+                    {
+                        tagsList
+                    }
+                </div>
+                <div className="tags-mobile">
+                    {
+                        tagsList[1]
+                    }
+                </div>
             </div>
         </div>
     );

@@ -103,3 +103,35 @@
     right: -45%;
 }
 }
+
+
+@media (max-width:460px) {
+
+    .Counseling {
+    height: 550px;
+
+    }
+    .decoration-left { 
+    display: none;
+}
+
+.decoration-right {
+    display: none;
+}
+
+.counseling-container {
+    flex-direction: column;
+}
+
+.Counseling h1 {
+    text-align: center;
+}
+
+.counseling-content {
+    align-items: center;
+}
+
+.counseling-content p {
+    text-align: center;
+}
+}

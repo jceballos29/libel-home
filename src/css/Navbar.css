@@ -297,7 +297,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     .search input {
         display: none;
     }
@@ -317,5 +317,13 @@
 
     .menu-list {
         width: 100vw;
+    }
+
+    .academy a {
+        display: none;
+    }
+
+    .logo img {
+        width: 120px;
     }
 }

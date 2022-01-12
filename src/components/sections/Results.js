@@ -1,40 +1,41 @@
-import React from 'react'
-import '../../css/sections/Results.css'
+import React from "react";
+import "../../css/sections/Results.css";
 
-import libel from '../../images/logo_dot.png'
-import { IoChevronForward } from "react-icons/io5";
-import ResultS from '../cards/ResultS';
-import ResultM from '../cards/ResultM';
-import ResultL from '../cards/ResultL';
+import libel from "../../images/logo_dot.png";
 
-import blender from "../../images/results/Imagen 9.png"
-import avatars from "../../images/results/Group 4225.png"
+import ResultS from "../cards/ResultS";
+import ResultM from "../cards/ResultM";
+import ResultL from "../cards/ResultL";
 
-import image1 from '../../images/results/Ellipse 230 (Mask).png'
-import image2 from "../../images/results/Rectangle 419.png"
-import image3 from '../../images/results/Rectangle 420.png'
-import image4 from '../../images/results/Ellipse 231.png'
+import blender from "../../images/results/Imagen 9.png";
+import avatars from "../../images/results/Group 4225.png";
 
-import tech1 from '../../images/professional3d/Imagen 8.png'
+import image1 from "../../images/results/Ellipse 230 (Mask).png";
+import image2 from "../../images/results/Rectangle 419.png";
+import image3 from "../../images/results/Rectangle 420.png";
+import image4 from "../../images/results/Ellipse 231.png";
 
-import decoration1 from '../../images/04.png'
+import tech1 from "../../images/professional3d/Imagen 8.png";
+
+import decoration1 from "../../images/04.png";
 import decoration2 from "../../images/01.png";
+
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const Results = () => {
     return (
         <div className="Results">
-
             <div className="result-container">
-            <img
-                src={decoration1}
-                alt="Decoration 1"
-                className="decoration-1"
-            />
-            <img
-                src={decoration2}
-                alt="Decoration 2"
-                className="decoration-2"
-            />
+                <img
+                    src={decoration1}
+                    alt="Decoration 1"
+                    className="decoration-1"
+                />
+                <img
+                    src={decoration2}
+                    alt="Decoration 2"
+                    className="decoration-2"
+                />
                 <div className="results-information">
                     <div className="results-title">
                         <img src={libel} alt="libel" />
@@ -107,17 +108,34 @@ const Results = () => {
                     </div>
                 </div>
                 <div className="results-cards-mobile">
-                    <ResultL
-                        image={image1}
-                        author={"Rodrigo"}
-                        title={"Oso Espacial"}
-                        points={"5.0"}
-                        tech={tech1}
-                    />
+                    <div className="mobile-cards">
+                        <div className="mobile-card-previous">
+                            <button className="mobile-card-button" style={{paddingRight: 5}}>
+                                <IoChevronBack />
+                            </button>
+                        </div>
+                        <div className="mobile-card">
+                            <ResultL
+                                image={image1}
+                                author={"Rodrigo"}
+                                title={"Oso Espacial"}
+                                points={"5.0"}
+                                tech={tech1}
+                            />
+                        </div>
+                        <div className="mobile-card-next">
+                            <button className="mobile-card-button" style={{paddingLeft: 5}}>
+                                <IoChevronForward />
+                            </button>
+                        </div>
+                    </div>
+                    <div className="mobile-student">
+                        <img src={avatars} alt="Group" />
+                    </div>
                 </div>
             </div>
         </div>
     );
-}
+};
 
-export default Results
+export default Results;

@@ -116,3 +116,21 @@
 
     }
 }
+
+@media (max-width: 460px) {
+
+    .Courses {
+        padding-top: 40px;
+    height: 1300px;
+
+    }
+
+    .courses-header {
+        flex-direction: column;
+    }
+
+    .courses-navigation {
+        align-self: center;
+        margin-top: 40px;
+    }
+}

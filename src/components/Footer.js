@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
             <footer>
                 <div className="foo-container">
-                    <p style={{ color: "#8f8f8f", textAlign: "left" }}>
+                    <p style={{ color: "#8f8f8f"}}>
                         Términos y condiciones
                     </p>
                     <p style={{ color: "#ffffff" }}>&copy; Copyright 2022</p>

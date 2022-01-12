@@ -72,6 +72,7 @@
 .results-text h2 {
     text-align: left;
     font-size: 40px;
+    line-height: 40px;
 }
 
 .results-text p {
@@ -152,7 +153,6 @@
 }
 
 @media (max-width: 1024px) {
-
     .result-container {
         padding: 0px 20px;
     }
@@ -160,10 +160,112 @@
     .results-text h2 {
         text-align: left;
         font-size: 34px;
+        line-height: 34px;
     }
 
-    .decoration-1 { 
-       display: none;
+    .decoration-1 {
+        display: none;
     }
 }
 
+@media (max-width: 460px) {
+    .decoration-2 {
+        display: none;
+    }
+
+    .Results {
+        height: 920px;
+        padding-top: 40px;
+    }
+
+    .results-cards {
+        display: none;
+    }
+
+    .result-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0px 0px;
+        gap: 0px 0px;
+        grid-template-areas: "results-information" "results-cards-mobile";
+    }
+
+    .results-information {
+        grid-template-rows: 0.3fr 1.7fr;
+    }
+
+    .results-text h2 {
+        padding-top: 20px;
+    }
+
+    .results-cards-mobile {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.8fr 0.2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "mobile-cards"
+            "mobile-students";
+    }
+
+    .mobile-cards {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "mobile-card-previous mobile-card mobile-card-next";
+        grid-area: mobile-cards;
+    }
+
+    .mobile-card-previous {
+        grid-area: mobile-card-previous;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-card-next {
+        grid-area: mobile-card-next;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-card {
+        grid-area: mobile-card;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-card-button {
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        color: #ffffff;
+        background-color: #6000de;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .mobile-students {
+        grid-area: mobile-students;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .result-container {
+    padding: 0px 10px;
+}
+    .results-text {
+        padding-left: 20px;
+    }
+}
